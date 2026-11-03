@@ -64,7 +64,8 @@ class LocalLLM:
         elif self.device == "mps":
             kwargs["torch_dtype"] = torch.float16
         else:
-            kwargs["torch_dtype"] = torch.float32
+            # On CPU, use bfloat16 to halve memory footprint (~0.9GB instead of ~2GB)
+            kwargs["torch_dtype"] = torch.bfloat16
 
         model = AutoModelForCausalLM.from_pretrained(cfg.base_model_id, **kwargs)
         if not self.quantized:
