@@ -40,13 +40,14 @@ class LocalLLM:
         self.adapter_error: str | None = None
         self.quantized = False
 
+        print(f">>> [LLM] Initializing tokenizer for {cfg.base_model_id}...", flush=True)
         self.tokenizer = AutoTokenizer.from_pretrained(
             cfg.base_model_id, token=cfg.hf_token, trust_remote_code=True
         )
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
-        kwargs: dict = {"token": cfg.hf_token, "trust_remote_code": True}
+        kwargs: dict = {"token": cfg.hf_token, "trust_remote_code": True, "low_cpu_mem_usage": True}
         if self.device == "cuda":
             if cfg.load_in_4bit:
                 try:
@@ -67,9 +68,11 @@ class LocalLLM:
             # On CPU, use bfloat16 to halve memory footprint (~0.9GB instead of ~2GB)
             kwargs["torch_dtype"] = torch.bfloat16
 
+        print(f">>> [LLM] Loading weights for {cfg.base_model_id} (low_cpu_mem_usage=True)...", flush=True)
         model = AutoModelForCausalLM.from_pretrained(cfg.base_model_id, **kwargs)
         if not self.quantized:
             model = model.to(self.device)
+        print(">>> [LLM] Base model loaded into memory.", flush=True)
 
         # Attach the fine-tuned LoRA router if the weights exist.
         if cfg.use_adapter:
@@ -80,14 +83,18 @@ class LocalLLM:
                 try:
                     from peft import PeftModel
 
+                    print(f">>> [LLM] Attaching LoRA router from {cfg.adapter_path}...", flush=True)
                     model = PeftModel.from_pretrained(model, cfg.adapter_path)
                     self.adapter_loaded = True
+                    print(">>> [LLM] LoRA adapter successfully attached!", flush=True)
                 except Exception as exc:  # noqa: BLE001
                     self.adapter_error = f"{type(exc).__name__}: {exc}"
+                    print(f">>> [LLM Warning] Adapter load failed: {exc}", flush=True)
             else:
                 self.adapter_error = (
                     f"No adapter_model.* weights found in {cfg.adapter_path}"
                 )
+                print(f">>> [LLM Warning] {self.adapter_error}", flush=True)
         model.eval()
         self.model = model
 

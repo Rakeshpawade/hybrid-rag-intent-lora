@@ -36,9 +36,12 @@ st.markdown(CSS, unsafe_allow_html=True)
 # ------------------------------------------------------------------ backend
 @st.cache_resource(show_spinner="Loading models and vector database (first run only)...")
 def load_pipeline():
+    print(">>> [App] Initializing Hybrid RAG pipeline...", flush=True)
     from rag import HybridRAG
 
-    return HybridRAG()
+    instance = HybridRAG()
+    print(">>> [App] Hybrid RAG pipeline successfully loaded and ready!", flush=True)
+    return instance
 
 
 def render_meta(meta: dict, show_trace: bool) -> None:

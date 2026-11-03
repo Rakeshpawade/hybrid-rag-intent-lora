@@ -24,9 +24,12 @@ class Chunk:
 class Retriever:
     def __init__(self, cfg: Settings):
         self.cfg = cfg
+        print(f">>> [Retriever] Loading embedding model ({cfg.embedding_model})...", flush=True)
         self.embedder = SentenceTransformer(cfg.embedding_model)
+        print(f">>> [Retriever] Opening ChromaDB at {cfg.chroma_path}...", flush=True)
         client = chromadb.PersistentClient(path=cfg.chroma_path)
         self.collection = client.get_collection(cfg.collection_name)
+        print(f">>> [Retriever] ChromaDB collection '{cfg.collection_name}' ready with {self.collection.count()} chunks.", flush=True)
 
     @property
     def size(self) -> int:
