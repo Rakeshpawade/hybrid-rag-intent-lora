@@ -1,0 +1,11 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+streamlit>=1.38
+torch>=2.2
+transformers>=4.44
+peft>=0.12
+accelerate>=0.33
+sentence-transformers>=3.0
+chromadb>=0.5
+python-dotenv>=1.0
+# CUDA (NVIDIA) laptops only - enables 4-bit loading. Skip on Mac / CPU.
+

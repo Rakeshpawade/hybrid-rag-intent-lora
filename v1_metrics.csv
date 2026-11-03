@@ -1,0 +1,8 @@
+Metric,Baseline,Solution V1 (RAG),Delta,Relative Improvement (%)
+Format Adherence (%),62.0,84.0,22.0,35.48
+Intent Accuracy (%),54.0,78.0,24.0,44.44
+ROUGE-1,0.285,0.452,0.167,58.6
+ROUGE-L,0.241,0.41,0.169,70.12
+BLEU,0.125,0.285,0.16,128.0
+Consistency (%),100.0,100.0,0.0,0.0
+Hallucination (%),32.0,12.0,-20.0,-62.5

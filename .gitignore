@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+tempCodeRunnerFile.py
+
+# System & IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Large training datasets & notebooks (keep deployment clean and fast)
+tokenized_train/
+tokenized_test/
+tokenized_valid/
+Dataset/
+intent_lora/
+*.jsonl
+sampled_data.csv
+df_test.csv
+*.ipynb
+*.zip

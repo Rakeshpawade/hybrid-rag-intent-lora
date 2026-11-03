@@ -1,0 +1,452 @@
+[
+  {
+    "chunk_id": "account_recovery_0",
+    "doc_id": "account_recovery",
+    "content": "# Account Recovery"
+  },
+  {
+    "chunk_id": "account_recovery_1",
+    "doc_id": "account_recovery",
+    "content": "When To Use\nUse this procedure when a customer cannot access their account due to a\nlockout, a lost email address, suspected unauthorized access, or a disabled\naccount \u2014 anything beyond a simple forgotten password (see the password reset\nprocedure for that case)."
+  },
+  {
+    "chunk_id": "account_recovery_2",
+    "doc_id": "account_recovery",
+    "content": "Identity Verification\nBefore any recovery action, verify identity with at least two of: the\nregistered email, the last order identifier, the billing postal code, or the\nlast four digits of the payment method on file. Never read back full payment\ndetails or one-time codes to the customer."
+  },
+  {
+    "chunk_id": "account_recovery_3",
+    "doc_id": "account_recovery",
+    "content": "Lockout After Failed Attempts\nAccounts lock for 30 minutes after five failed sign-in attempts. If the\ncustomer did not make those attempts, treat it as a possible compromise:\nunlock only after identity verification, force a password reset, and\nrecommend enabling two-factor authentication."
+  },
+  {
+    "chunk_id": "account_recovery_4",
+    "doc_id": "account_recovery",
+    "content": "Lost Or Changed Email\nIf the customer no longer controls the registered email, collect proof of\nidentity, update the address through the verified-change workflow, and send a\nconfirmation to both the old and new addresses where possible."
+  },
+  {
+    "chunk_id": "account_recovery_5",
+    "doc_id": "account_recovery",
+    "content": "Suspected Compromise\n1. Verify identity.\n2. Lock active sessions and revoke long-lived tokens.\n3. Force a password reset and prompt two-factor enrollment.\n4. Review recent orders and address changes for fraud.\n5. Escalate confirmed account takeover to the security queue."
+  },
+  {
+    "chunk_id": "account_recovery_6",
+    "doc_id": "account_recovery",
+    "content": "Communication\nReassure the customer, explain each protective step, and confirm the account\nis secured before closing. Document the recovery reason for audit."
+  },
+  {
+    "chunk_id": "billing_disputes_0",
+    "doc_id": "billing_disputes",
+    "content": "# Billing Disputes"
+  },
+  {
+    "chunk_id": "billing_disputes_1",
+    "doc_id": "billing_disputes",
+    "content": "Scope\nUse this when a customer questions a charge: an amount they do not recognize,\na charge larger than expected, a duplicate charge, or a charge after they\nbelieved a service had ended. Refund eligibility itself is governed by the\nrefund policy; this procedure focuses on investigating the charge."
+  },
+  {
+    "chunk_id": "billing_disputes_2",
+    "doc_id": "billing_disputes",
+    "content": "Triage\n1. Identify the exact charge: date, amount, and descriptor.\n2. Match it to an order, subscription renewal, tax/shipping component, or\n   pre-authorization hold.\n3. Distinguish a true duplicate from a pending authorization that will drop\n   off automatically within 3\u20135 business days."
+  },
+  {
+    "chunk_id": "billing_disputes_3",
+    "doc_id": "billing_disputes",
+    "content": "Common Causes\n- **Pre-authorization holds:** temporary and release on their own; explain\n  rather than refund.\n- **Proration:** plan changes mid-cycle create a partial line item.\n- **Tax or shipping:** shown separately from the item subtotal.\n- **Genuine duplicate or system error:** reverse promptly and prioritize."
+  },
+  {
+    "chunk_id": "billing_disputes_4",
+    "doc_id": "billing_disputes",
+    "content": "Resolution\nConfirmed billing errors and duplicates are corrected and refunded to the\noriginal payment method within 3\u20135 business days. If the customer initiated a\nchargeback with their bank, do not also issue a manual refund \u2014 coordinate\nthrough the payments team to avoid a double credit."
+  },
+  {
+    "chunk_id": "billing_disputes_5",
+    "doc_id": "billing_disputes",
+    "content": "Agent Steps\n1. Verify identity per account recovery standards before discussing charges.\n2. Explain the charge clearly or open a correction.\n3. Provide a reference number and the expected resolution timeline.\n4. Log the dispute reason for financial reporting."
+  },
+  {
+    "chunk_id": "billing_disputes_6",
+    "doc_id": "billing_disputes",
+    "content": "Escalation\nDisputed amounts above standard agent authority, chargeback conflicts, or\nsuspected fraud route to the billing supervisor via the escalation matrix."
+  },
+  {
+    "chunk_id": "data_privacy_0",
+    "doc_id": "data_privacy",
+    "content": "# Data Privacy"
+  },
+  {
+    "chunk_id": "data_privacy_1",
+    "doc_id": "data_privacy",
+    "content": "Scope\nCovers customer requests about their personal data: what is held, access\ncopies, correction, deletion, marketing preferences, and concerns about how\ndata is used."
+  },
+  {
+    "chunk_id": "data_privacy_2",
+    "doc_id": "data_privacy",
+    "content": "Core Principles\nCollect only what is needed, use it only for stated purposes, and never share\ncustomer data with unauthorized parties. Agents access customer records only\nto resolve the customer's own request."
+  },
+  {
+    "chunk_id": "data_privacy_3",
+    "doc_id": "data_privacy",
+    "content": "Data Subject Requests\n- **Access:** the customer may request a copy of their personal data.\n  Fulfilled within the statutory window after identity verification.\n- **Correction:** inaccurate details are updated through the verified-change\n  workflow.\n- **Deletion:** account and personal data are deleted on request, except\n  records that must be retained for legal, tax, or fraud-prevention reasons;\n  explain any such retention plainly.\n- **Marketing opt-out:** honored promptly and does not affect essential\n  service messages such as order or security notifications."
+  },
+  {
+    "chunk_id": "data_privacy_4",
+    "doc_id": "data_privacy",
+    "content": "Verification And Safety\nAlways verify identity before discussing or changing any personal data, using\nthe account recovery standards. Never confirm whether an account exists to an\nunverified caller, and never send personal data to an unverified address."
+  },
+  {
+    "chunk_id": "data_privacy_5",
+    "doc_id": "data_privacy",
+    "content": "Incidents\nAny suspected exposure or unauthorized access to personal data is a P1 under\nthe escalation matrix: route immediately to the security queue and avoid\nspeculative statements to the customer until the incident lead responds."
+  },
+  {
+    "chunk_id": "data_privacy_6",
+    "doc_id": "data_privacy",
+    "content": "Agent Steps\n1. Verify identity.\n2. Identify the specific right being exercised.\n3. Log the request and route deletion or access requests to the privacy\n   workflow with the statutory deadline noted.\n4. Confirm the action and timeline in writing."
+  },
+  {
+    "chunk_id": "escalation_matrix_0",
+    "doc_id": "escalation_matrix",
+    "content": "# Escalation Matrix"
+  },
+  {
+    "chunk_id": "escalation_matrix_1",
+    "doc_id": "escalation_matrix",
+    "content": "Purpose\nDefines when and how to move a case beyond a first-line agent so customers\nget the right authority quickly without unnecessary hand-offs."
+  },
+  {
+    "chunk_id": "escalation_matrix_2",
+    "doc_id": "escalation_matrix",
+    "content": "Severity Levels\n- **P1 \u2014 Critical:** confirmed account takeover, payment fraud, data breach,\n  or a widespread outage. Escalate immediately to the security or incident\n  queue; do not wait for the customer to follow up.\n- **P2 \u2014 High:** data loss risk, repeated failed resolution, high-value\n  dispute, legal or regulatory mention, or a vulnerable customer. Route to a\n  supervisor the same business day.\n- **P3 \u2014 Medium:** standard dispute above agent authority, policy exception\n  request, or a reproducible technical bug. Queue to the relevant specialist\n  team.\n- **P4 \u2014 Low:** routine question answerable with existing procedures. No\n  escalation."
+  },
+  {
+    "chunk_id": "escalation_matrix_3",
+    "doc_id": "escalation_matrix",
+    "content": "Authority Limits\nFirst-line agents may approve refunds, goodwill credits, and shipping waivers\nup to the standard threshold. Amounts above the threshold, policy exceptions,\nand chargeback conflicts require supervisor approval."
+  },
+  {
+    "chunk_id": "escalation_matrix_4",
+    "doc_id": "escalation_matrix",
+    "content": "Routing\n- Billing and payment conflicts \u2192 billing supervisor.\n- Account takeover and fraud \u2192 security queue.\n- Reproducible bugs and data loss \u2192 engineering.\n- Legal, press, or regulatory mentions \u2192 escalations lead, no substantive\n  reply until cleared."
+  },
+  {
+    "chunk_id": "escalation_matrix_5",
+    "doc_id": "escalation_matrix",
+    "content": "Handing Off\nInclude a concise summary, verified identity status, actions already taken,\nand the desired outcome. Tell the customer who will follow up and by when.\nNever close a case as resolved while an escalation is still open."
+  },
+  {
+    "chunk_id": "order_tracking_0",
+    "doc_id": "order_tracking",
+    "content": "# Order Tracking"
+  },
+  {
+    "chunk_id": "order_tracking_1",
+    "doc_id": "order_tracking",
+    "content": "Scope\nHelps customers locate an order and interpret its status. Orders that have\nclearly exceeded their delivery window follow the shipping delays procedure."
+  },
+  {
+    "chunk_id": "order_tracking_2",
+    "doc_id": "order_tracking",
+    "content": "Order States\n- **Processing:** payment confirmed, not yet packed.\n- **Preparing to ship:** packed, awaiting carrier pickup.\n- **In transit:** carrier has the parcel; tracking events update as it moves.\n- **Out for delivery:** on the vehicle for delivery that day.\n- **Delivered:** carrier marked the parcel delivered.\n- **Exception:** address issue, failed delivery, or held parcel needing\n  action."
+  },
+  {
+    "chunk_id": "order_tracking_3",
+    "doc_id": "order_tracking",
+    "content": "Finding The Order\nLocate the order by its identifier and the registered email. Provide the\ntracking number and carrier link. Tracking can take up to 24 hours to show\nthe first scan after a label is created, so a label with no movement on day\none is expected, not lost."
+  },
+  {
+    "chunk_id": "order_tracking_4",
+    "doc_id": "order_tracking",
+    "content": "\"Delivered But Not Received\"\n1. Confirm the shipping address on the order.\n2. Ask the customer to check with neighbors, household members, and safe\n   drop-off spots, and to allow 24 hours, as carriers sometimes scan early.\n3. If still missing, open a carrier investigation and offer a replacement or\n   refund per the shipping delays and refund procedures."
+  },
+  {
+    "chunk_id": "order_tracking_5",
+    "doc_id": "order_tracking",
+    "content": "Exceptions\nFor address errors caught before delivery, attempt an address correction with\nthe carrier. For held parcels, relay the action the customer must take."
+  },
+  {
+    "chunk_id": "order_tracking_6",
+    "doc_id": "order_tracking",
+    "content": "Communication\nAlways leave the customer with the tracking reference, the current state in\nplain language, and a clear next step or follow-up time."
+  },
+  {
+    "chunk_id": "password_reset_0",
+    "doc_id": "password_reset",
+    "content": "# Password Reset"
+  },
+  {
+    "chunk_id": "password_reset_1",
+    "doc_id": "password_reset",
+    "content": "Scope\nThis covers the routine case of a customer who knows their account email but\nhas forgotten or wants to change their password. Lockouts, lost email access,\nor suspected compromise follow the account recovery procedure instead."
+  },
+  {
+    "chunk_id": "password_reset_2",
+    "doc_id": "password_reset",
+    "content": "Self-Service Flow\nDirect the customer to the \"Forgot password\" link on the sign-in page. A reset\nemail is sent to the registered address and the link is valid for 60 minutes\nand single use. Advise checking spam folders and allowing a few minutes for\ndelivery."
+  },
+  {
+    "chunk_id": "password_reset_3",
+    "doc_id": "password_reset",
+    "content": "Common Failure Points\n- **No email received:** confirm the spelling of the registered address,\n  resend once, and check the address is not an unverified alias.\n- **Link expired or already used:** generate a fresh reset; old links\n  intentionally stop working for security.\n- **Reset succeeds but sign-in still fails:** confirm the customer is using\n  the updated password and not a saved browser autofill of the old one."
+  },
+  {
+    "chunk_id": "password_reset_4",
+    "doc_id": "password_reset",
+    "content": "Password Requirements\nMinimum 10 characters with a mix of letter case and at least one number or\nsymbol. Reused or breached passwords are rejected. Encourage a password\nmanager and two-factor authentication."
+  },
+  {
+    "chunk_id": "password_reset_5",
+    "doc_id": "password_reset",
+    "content": "Agent Steps\n1. Confirm the registered email.\n2. Trigger or guide the self-service reset; do not set a password on the\n   customer's behalf.\n3. If delivery fails repeatedly, verify the address health and escalate to\n   account recovery.\n4. Confirm the customer can sign in before closing."
+  },
+  {
+    "chunk_id": "password_reset_6",
+    "doc_id": "password_reset",
+    "content": "Communication\nKeep it brief and reassuring. Never ask the customer to send their password,\nand never share a one-time link through an unverified channel."
+  },
+  {
+    "chunk_id": "payment_methods_0",
+    "doc_id": "payment_methods",
+    "content": "# Payment Methods"
+  },
+  {
+    "chunk_id": "payment_methods_1",
+    "doc_id": "payment_methods",
+    "content": "Accepted Methods\nThe store accepts major credit and debit cards, common digital wallets, and\nbank transfer for eligible regions. Gift cards and store credit can be\ncombined with one other payment method at checkout. Cash on delivery is not\noffered for online orders."
+  },
+  {
+    "chunk_id": "payment_methods_2",
+    "doc_id": "payment_methods",
+    "content": "Authorization vs Capture\nAt checkout the payment is authorized (a temporary hold) and only captured\nwhen the order ships. A visible pending hold that does not match the final\ntotal is normal and resolves within 3\u20135 business days; explain this before\ntreating it as a billing dispute."
+  },
+  {
+    "chunk_id": "payment_methods_3",
+    "doc_id": "payment_methods",
+    "content": "Failed Or Declined Payments\nCommon causes: insufficient funds, an expired card, a billing-address\nmismatch, or the bank's fraud screening. Advise the customer to verify card\ndetails and contact their bank if the decline persists. Never ask the\ncustomer to send full card numbers or security codes through chat or email."
+  },
+  {
+    "chunk_id": "payment_methods_4",
+    "doc_id": "payment_methods",
+    "content": "Updating Payment Details\nCustomers update saved payment methods in account settings. For a failed\nsubscription renewal, updating the method and retrying restores the\nsubscription without creating a new one."
+  },
+  {
+    "chunk_id": "payment_methods_5",
+    "doc_id": "payment_methods",
+    "content": "Currency And Fees\nCharges are billed in the store's listed currency. Foreign-exchange\nconversion or international fees are set by the customer's bank and are not\ncontrolled or refundable by support."
+  },
+  {
+    "chunk_id": "payment_methods_6",
+    "doc_id": "payment_methods",
+    "content": "Agent Steps\n1. Verify identity before discussing any payment record.\n2. Identify whether the issue is an authorization hold, a decline, or a true\n   charge problem.\n3. For declines, guide a safe retry; for charge problems, follow billing\n   disputes.\n4. Escalate suspected fraud through the escalation matrix."
+  },
+  {
+    "chunk_id": "product_return_0",
+    "doc_id": "product_return",
+    "content": "# Product Return"
+  },
+  {
+    "chunk_id": "product_return_1",
+    "doc_id": "product_return",
+    "content": "Scope\nCovers physically returning an item, whether for a refund, an exchange, or a\nwarranty replacement. The monetary outcome is governed by the refund policy;\nthis procedure covers the logistics of getting the item back."
+  },
+  {
+    "chunk_id": "product_return_2",
+    "doc_id": "product_return",
+    "content": "Return Window\nItems may be returned within 30 days of delivery. They should be in resalable\ncondition with original packaging where practical. Defective or\nincorrectly-shipped items can be returned at any reasonable time and never\nincur a restocking deduction."
+  },
+  {
+    "chunk_id": "product_return_3",
+    "doc_id": "product_return",
+    "content": "Return Methods\n1. Issue a prepaid return label for defective or wrong-item cases at no cost\n   to the customer.\n2. For change-of-mind returns, the customer may be responsible for return\n   shipping unless a free-returns promotion applies.\n3. Provide a return reference and instructions for drop-off or pickup."
+  },
+  {
+    "chunk_id": "product_return_4",
+    "doc_id": "product_return",
+    "content": "Exchanges\nFor size, color, or model swaps, create the replacement order on a hold and\nrelease it once the carrier scans the returned item, or immediately for\ntrusted accounts. Explain any price difference."
+  },
+  {
+    "chunk_id": "product_return_5",
+    "doc_id": "product_return",
+    "content": "Inspection\nOn receipt, the warehouse inspects the item and confirms condition before the\nrefund or exchange is finalized, typically within 2 business days of delivery\nback to the facility."
+  },
+  {
+    "chunk_id": "product_return_6",
+    "doc_id": "product_return",
+    "content": "Agent Steps\n1. Verify the order and reason for return.\n2. Select the correct return method and fee treatment.\n3. Send the label and clear packing instructions.\n4. Set expectations: inspection time plus refund timeline from the refund\n   policy."
+  },
+  {
+    "chunk_id": "product_return_7",
+    "doc_id": "product_return",
+    "content": "Escalation\nDisputed condition assessments or high-value items follow the escalation\nmatrix."
+  },
+  {
+    "chunk_id": "refund_policy_0",
+    "doc_id": "refund_policy",
+    "content": "# Refund Policy"
+  },
+  {
+    "chunk_id": "refund_policy_1",
+    "doc_id": "refund_policy",
+    "content": "Eligibility\nCustomers may request a refund within 30 days of the original purchase or\ndelivery date, whichever is later. To be eligible, the item must be unused or\ndefective, and the request must reference a valid order identifier. Digital\ngoods and subscription fees already consumed are non-refundable except where\nrequired by local consumer law."
+  },
+  {
+    "chunk_id": "refund_policy_2",
+    "doc_id": "refund_policy",
+    "content": "Refund Methods\nApproved refunds are issued to the original payment method. If the original\ncard or wallet is no longer active, store credit of equal value is offered as\nan alternative. Cash refunds are not provided for online orders."
+  },
+  {
+    "chunk_id": "refund_policy_3",
+    "doc_id": "refund_policy",
+    "content": "Processing Time\nOnce a refund is approved, the amount is released within 5\u20137 business days.\nBank or card-network posting can add a further 3\u20135 business days, so advise\ncustomers that the full cycle may take up to 12 business days. Duplicate or\naccidental charges are prioritized and typically reversed within 3 business\ndays."
+  },
+  {
+    "chunk_id": "refund_policy_4",
+    "doc_id": "refund_policy",
+    "content": "Partial Refunds\nPartial refunds apply when only some items in an order are returned, when a\npromotional discount must be recalculated, or when a restocking deduction\napplies to opened non-defective goods. Defective items are always refunded in\nfull, including original shipping."
+  },
+  {
+    "chunk_id": "refund_policy_5",
+    "doc_id": "refund_policy",
+    "content": "Agent Steps\n1. Verify the order identifier and purchase date.\n2. Confirm the item condition and refund reason.\n3. Check for prior refunds on the same order to avoid double processing.\n4. Submit the refund and share the expected timeline above.\n5. Log the reason code for reporting."
+  },
+  {
+    "chunk_id": "refund_policy_6",
+    "doc_id": "refund_policy",
+    "content": "Escalation\nIf the customer disputes a denied refund, or the amount exceeds standard\nagent authority, route the case to a supervisor using the escalation matrix.\nNever promise an exact posting date controlled by the customer's bank."
+  },
+  {
+    "chunk_id": "shipping_delays_0",
+    "doc_id": "shipping_delays",
+    "content": "# Shipping Delays"
+  },
+  {
+    "chunk_id": "shipping_delays_1",
+    "doc_id": "shipping_delays",
+    "content": "Scope\nThis procedure covers orders that have shipped but are running behind the\nestimated delivery date, as well as orders stuck in a pre-shipment state."
+  },
+  {
+    "chunk_id": "shipping_delays_2",
+    "doc_id": "shipping_delays",
+    "content": "Standard Timelines\nDomestic orders deliver within 3\u20137 business days; international orders within\n10\u201321 business days. An order is only considered \"delayed\" once it has passed\nthe upper bound of its quoted window. Carrier scans can lag reality by up to\n24 hours, so a single stale tracking event is not by itself a delay."
+  },
+  {
+    "chunk_id": "shipping_delays_3",
+    "doc_id": "shipping_delays",
+    "content": "Agent Steps\n1. Confirm the order identifier and the original estimated window.\n2. Check the latest carrier scan and the warehouse dispatch status.\n3. If the parcel is in transit but late, open a carrier trace and tell the\n   customer to expect an update within 24\u201348 hours.\n4. If the parcel shows no movement for more than 5 business days, treat it as\n   potentially lost and offer a replacement shipment or a full refund.\n5. For weather, customs, or peak-season backlogs, explain the cause and give a\n   realistic revised estimate rather than a guaranteed date."
+  },
+  {
+    "chunk_id": "shipping_delays_4",
+    "doc_id": "shipping_delays",
+    "content": "Compensation\nFor significant delays the customer may be offered expedited reshipment at no\ncost, a shipping-fee refund, or a goodwill credit. Goodwill credit beyond the\nstandard threshold requires supervisor approval per the escalation matrix."
+  },
+  {
+    "chunk_id": "shipping_delays_5",
+    "doc_id": "shipping_delays",
+    "content": "Communication\nAcknowledge the inconvenience, give one clear next step, and avoid promising\ndelivery dates that depend on third-party carriers. Always leave the customer\nwith a tracking reference and a follow-up timeframe."
+  },
+  {
+    "chunk_id": "subscription_cancellation_0",
+    "doc_id": "subscription_cancellation",
+    "content": "# Subscription Cancellation"
+  },
+  {
+    "chunk_id": "subscription_cancellation_1",
+    "doc_id": "subscription_cancellation",
+    "content": "Scope\nCovers customers who want to cancel a recurring subscription, pause it, or\nstop auto-renewal. Refunds for already-billed periods follow the refund\npolicy."
+  },
+  {
+    "chunk_id": "subscription_cancellation_2",
+    "doc_id": "subscription_cancellation",
+    "content": "Cancellation Options\n- **Cancel at period end (default):** access continues until the paid period\n  expires; no further charges occur.\n- **Immediate cancellation:** access ends now; eligible unused time may be\n  refunded only where the plan terms or local law require it.\n- **Pause:** billing suspends for a chosen interval and resumes automatically\n  unless cancelled."
+  },
+  {
+    "chunk_id": "subscription_cancellation_3",
+    "doc_id": "subscription_cancellation",
+    "content": "Auto-Renewal\nAuto-renewal is on by default. Disabling it keeps the subscription active\nthrough the current period and prevents the next charge. Confirm to the\ncustomer the exact date the final access ends."
+  },
+  {
+    "chunk_id": "subscription_cancellation_4",
+    "doc_id": "subscription_cancellation",
+    "content": "Retention\nOffering a pause or a downgrade is acceptable when the customer's concern is\nprice or temporary non-use. Do not apply pressure, and always honor a clear\ncancellation request even if a retention offer was declined."
+  },
+  {
+    "chunk_id": "subscription_cancellation_5",
+    "doc_id": "subscription_cancellation",
+    "content": "Agent Steps\n1. Verify identity and locate the active subscription.\n2. Confirm which option the customer wants and the effective date.\n3. Process the change and disable auto-renewal if requested.\n4. Send written confirmation including the last day of access and whether any\n   refund applies.\n5. Log the cancellation reason."
+  },
+  {
+    "chunk_id": "subscription_cancellation_6",
+    "doc_id": "subscription_cancellation",
+    "content": "Communication\nAcknowledge the request promptly, avoid dark patterns, and never silently\nkeep a subscription active after a cancellation request. Escalate billing\nconflicts arising from cancellation via the escalation matrix."
+  },
+  {
+    "chunk_id": "technical_troubleshooting_0",
+    "doc_id": "technical_troubleshooting",
+    "content": "# Technical Troubleshooting"
+  },
+  {
+    "chunk_id": "technical_troubleshooting_1",
+    "doc_id": "technical_troubleshooting",
+    "content": "Scope\nCovers product and platform technical issues: app crashes, login failures\ncaused by the client, sync errors, broken features, errors on checkout, and\nperformance problems. Account access policy questions follow account recovery."
+  },
+  {
+    "chunk_id": "technical_troubleshooting_2",
+    "doc_id": "technical_troubleshooting",
+    "content": "First-Line Steps\n1. Capture the exact symptom, when it started, and whether it is reproducible.\n2. Record environment: app or browser version, operating system, and device.\n3. Try the standard recovery sequence: update to the latest version, restart\n   the app, clear cache, and retry on another network or device.\n4. Confirm whether the issue is account-specific or affects all users (check\n   the status dashboard for a known incident)."
+  },
+  {
+    "chunk_id": "technical_troubleshooting_3",
+    "doc_id": "technical_troubleshooting",
+    "content": "Crashes And Errors\nFor repeatable crashes, collect the action that triggers it and any error\ncode or screenshot. For checkout or payment errors, do not retry charges\nrepeatedly \u2014 confirm whether any charge actually posted before advising a\nsecond attempt."
+  },
+  {
+    "chunk_id": "technical_troubleshooting_4",
+    "doc_id": "technical_troubleshooting",
+    "content": "Data And Sync\nIf data is missing or not syncing, avoid destructive steps (reinstall,\naccount reset) until a backup or server-side copy is confirmed, to prevent\npermanent loss."
+  },
+  {
+    "chunk_id": "technical_troubleshooting_5",
+    "doc_id": "technical_troubleshooting",
+    "content": "Escalation To Engineering\nEscalate when: the issue is reproducible after first-line steps, multiple\ncustomers report the same symptom, data loss is involved, or a security flaw\nis suspected. Provide the reproduction steps, environment, and timestamps so\nengineering can act without re-contacting the customer."
+  },
+  {
+    "chunk_id": "technical_troubleshooting_6",
+    "doc_id": "technical_troubleshooting",
+    "content": "Communication\nGive one clear instruction at a time, set expectations for investigation\ntime, and never blame the customer. Follow the escalation matrix for severity\nand routing."
+  },
+  {
+    "chunk_id": "working_hours_0",
+    "doc_id": "working_hours",
+    "content": "# Working Hours"
+  },
+  {
+    "chunk_id": "working_hours_1",
+    "doc_id": "working_hours",
+    "content": "Support Availability\nLive chat and phone support operate Monday to Friday, 08:00\u201320:00, and\nweekends 10:00\u201318:00, in the customer's local business region. Email and\nticket support are accepted 24/7 and answered during staffed hours."
+  },
+  {
+    "chunk_id": "working_hours_2",
+    "doc_id": "working_hours",
+    "content": "Response Targets\n- Live chat: under 2 minutes to first response during staffed hours.\n- Phone: under 5 minutes average wait during staffed hours.\n- Email or ticket: first reply within one business day; complex cases within\n  three business days with interim updates."
+  },
+  {
+    "chunk_id": "working_hours_3",
+    "doc_id": "working_hours",
+    "content": "After-Hours Handling\nOutside staffed hours, customers can self-serve through the help center,\norder tracking, and the password reset flow. Critical issues \u2014 confirmed\nfraud, account takeover, or a major outage \u2014 are monitored continuously and\nactioned by the on-call queue regardless of the clock."
+  },
+  {
+    "chunk_id": "working_hours_4",
+    "doc_id": "working_hours",
+    "content": "Holidays And Peak Periods\nOn public holidays, support runs reduced weekend hours. During peak sale\nperiods, response targets may extend; set expectations honestly rather than\nquoting standard times the team cannot meet."
+  },
+  {
+    "chunk_id": "working_hours_5",
+    "doc_id": "working_hours",
+    "content": "Time Zones\nAlways confirm the customer's time zone before promising a callback or\nfollow-up window, and express commitments in the customer's local time to\navoid missed connections."
+  },
+  {
+    "chunk_id": "working_hours_6",
+    "doc_id": "working_hours",
+    "content": "Agent Guidance\nIf a customer is contacting outside staffed hours with a non-critical issue,\nacknowledge receipt, set a realistic next-reply time, and point them to\nrelevant self-service procedures. Do not promise immediate human follow-up\nthat the current staffing cannot deliver."
+  }
+]

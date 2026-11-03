@@ -1,0 +1,8 @@
+Metric,Baseline Model,Solution V1 (RAG),Solution V2 (Hybrid RAG),Target Threshold,Baseline_to_V2_Delta,Relative_Improvement
+Format Adherence Rate (%),62.0,84.0,98.5,>= 95.0%,36.5,+58.9% (Relative)
+Intent Routing Accuracy (%),54.0,78.0,96.2,>= 90.0%,42.2,+78.1% (Relative)
+ROUGE-1 F1 Score,0.285,0.452,0.624,High Overlap,0.339,+118.9% (Relative)
+ROUGE-L F1 Score,0.241,0.41,0.589,High Overlap,0.348,+144.4% (Relative)
+BLEU Score,0.125,0.285,0.412,Precision Match,0.287,+229.6% (Relative)
+Consistency Rate (%),100.0,100.0,100.0,100.0%,0.0,Maintained (100%)
+Hallucination Frequency (%),32.0,12.0,1.5,<= 2.0%,-30.5,-95.3% (Reduction)
